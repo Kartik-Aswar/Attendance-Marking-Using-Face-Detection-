@@ -107,9 +107,7 @@ Visit [**http://127.0.0.1:5000/**](http://127.0.0.1:5000/) in your browser.
 - **Hrushikesh Kale**
 - **Kisan Yadav**
 
-## 📜 License
 
-This project is licensed under the **MIT License**.
 
 ---
 
