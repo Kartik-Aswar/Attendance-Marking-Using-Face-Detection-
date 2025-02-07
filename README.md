@@ -79,7 +79,8 @@ Visit [**http://127.0.0.1:5000/**](http://127.0.0.1:5000/) in your browser.
 
 ## 🖼️ Screenshots
 
-### Home Page
+### Home Page ![image](https://github.com/user-attachments/assets/4dd3f1ba-3ab8-46b1-8137-16cb4b0d087e)
+
 
 
 
