@@ -79,16 +79,18 @@ Visit [**http://127.0.0.1:5000/**](http://127.0.0.1:5000/) in your browser.
 
 ## 🖼️ Screenshots
 
-### Home Page ![image](https://github.com/user-attachments/assets/4dd3f1ba-3ab8-46b1-8137-16cb4b0d087e)
+### Home Page 
+![image](https://github.com/user-attachments/assets/4dd3f1ba-3ab8-46b1-8137-16cb4b0d087e)
 
 
 
 
 ### Add New User
-
+![image](https://github.com/user-attachments/assets/7a39b6db-73a0-4ab4-870c-91eafc3b219d)
 
 
 ### Mark Attendance
+![image](https://github.com/user-attachments/assets/a1e88b31-c26a-4eb1-9f1e-1805d7225516)
 
 
 
