@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Marker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+
+<div class="table-title">
+    <p>Your Face is your</p>
+    <p class="pre">&nbsp;Presence!</p>
+</div>
+
+<div class="boxing-horizontal">
+    <div class="take-attendance boxing">
+
+        <div class="today-att">
+            <div class="att-date">
+                <div class="add-icon2">
+                    <i class="material-icons">assignment</i>
+                </div>
+                <p>Today's Attendance</p>
+            </div>
+            <div class="date">
+                <p>{{ datetoday2 }}</p>
+            </div>
+        </div>
+
+        {% if mess %}
+            <p>{{ mess }}</p>
+        {% endif %}
+
+        <div class="table-data">
+            <table>
+                <tr>
+                    <th>S No</th>
+                    <th>Name</th>
+                    <th>Roll number</th>
+                    <th>Time</th>
+                </tr>
+
+                {% for i in range(l) %}
+
+                <tr>
+                    <td>{{ i+1 }}</td>
+                    <td>{{ names[i] }}</td>
+                    <td>{{ rolls[i] }}</td>
+                    <td>{{ times[i] }}</td>
+                </tr>
+
+                {% endfor %}
+            </table>
+
+        </div>
+
+        <div class="submit-btn ">
+            <div class="det-name">
+                {% if detected_name %}
+                <p>{{ detected_name }} Present</p>
+                {% endif %}    
+            </div>
+            <a href="/start" class="href">
+                <button type='submit' class="btn att-btn zoom-btn">
+                    <span class="btn-text btn-text1">
+                        Take Attendance
+                        <div class="submit-icon">
+                            <i class="material-icons sub-icon">beenhere</i>
+                        </div>
+                    </span>
+                </button>
+            </a>
+        </div>
+
+    </div>
+    <div class="camera-box-for-adding-student boxing">
+        <h2>Mark your attendance here!</h2>
+        <img id="video_feed" src="{{ url_for('video_feed_start') }}" alt="Video Feed">
+    </div>
+</div>
+</div>
+</div>
+
+<div class="go-to-add-attendance">
+    <form action="/attendance">
+        <button class="btn zoom-btn attendance-route">
+            <span class="btn-text">Add new Student</span>
+        </button>
+    </form>
+</div>
+
+ 
+<script>
+    // Function to handle button click event
+    document.getElementById('scrollButton').addEventListener('click', function() {
+        // Scroll to the target section
+        document.getElementById('scrollTarget').scrollIntoView({
+        behavior: 'smooth'
+        });
+    });
+
+    setInterval(function() {
+    var image = document.getElementById("video_feed");
+    image.src = "{{ url_for('video_feed') }}" + "?" + new Date().getTime(); // Prevent caching
+    }, 500);  // Refresh every 500 ms
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,460 @@
+
+* {
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+}
+
+/* Navbar styling */
+
+.navbar {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: aliceblue;
+    margin-top: -130px;
+    margin-left: 23px;
+    margin-right: 4px;
+    z-index: 2;
+}
+
+/* Navbar box 1 */
+
+.nav-logo{
+    height: 65px;
+    width: 145px;
+    margin-top: 5px;
+    margin-right: 100px;
+}
+
+.logo {
+    /* background-image: url(attendance1.png); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 120px;
+    margin-top: 8px;
+}
+
+.p1 {
+    font-size: 30px;
+    font-weight: 900;
+    color: #454545;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.p2 {
+    font-size: 10px;
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 480px;
+}
+
+.industry {
+    border: none;
+    font-size: 16px;
+    background-color: aliceblue;
+}
+
+.option1 {
+    font-size: 16px;
+}
+
+.opt {
+    margin: 30px;
+}
+
+.btn {
+    border: none;
+    background-color: #1531a9;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* hero section */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.hero-upr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-lwr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.tag-line {
+    font-size: 35px;
+    font-weight: 700;
+    color: #1531a9;
+    margin-bottom: 70px;
+}
+
+.tag-line p {
+    margin-top: 20px;
+}
+
+.gry {
+    color: #454545;
+}
+
+.gry-blue {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    color: #454545;
+}
+
+.touch-btn {
+    margin-top: 50px;
+}
+
+.gif {
+    margin-left: 150px;
+}
+
+.img {
+    height: 150px;
+    width: 150px;
+    margin: 80px;
+
+}
+
+.img4 {
+    height: 150px;
+    width: 190px;
+    margin-left: 40px;
+}
+
+.go-to-add-attendance {
+    /* margin-top: px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scrollButton{
+    /* position: fixed; */
+    cursor: pointer;
+}
+
+#scrollTarget {
+    /* margin-top: px; Adjust as needed */
+    padding: 20px;
+    height: 700px;
+}
+
+
+/* Attendance section */
+.table-title {
+    height: 70px;
+    font-size: 35px;
+    font-weight: 700;
+    color: #454545;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pre {
+    color: #1531a9;
+}
+
+
+
+/* table 1 */
+
+.attendance-box {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-left: 3px;
+}
+
+.boxing {
+    height: 540px;
+    width: 50%;
+    background-color: white;
+    border-radius: 8px;
+    margin: 20px 50px 50px 50px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 40%);
+}
+
+.boxing-horizontal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.camera-box-for-adding-student {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.camera-box-for-adding-student h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#camera-feed {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    border: 1px solid #ccc;
+}
+video {
+    width: 100%;
+    height: 100%;
+}
+#capture-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+
+
+/* input-data */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+
+}
+
+.add-new-usr {
+    display: flex;
+    font-size: 30px;
+    font-weight: 600;
+    color: #212121;
+}
+
+.add-icon {
+    margin-right: 10px;
+}
+
+.input {
+    border: 2px solid #f0f0f0 ;
+    border-radius: 4px;
+    height: 38px;
+    width: 300px;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.label {
+    font-size: 16px;
+    color: #212121;
+    margin-top: 40px;
+}
+
+.data-submit-btn {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+#img-capturing-prompt {
+    visibility: hidden;
+}
+
+.total-user {
+    font-size: 16px;
+    color: #212121;
+}
+
+.form-foot {
+    font-size: 11px;
+    color: #6B6B6BB5;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.take-attendance {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.today-att {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    color: #212121;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.att-date {
+    display: flex;
+    font-size: 30px;
+    font-weight: 600;
+    color: #212121;
+    margin-top: 40px;
+}
+
+.add-icon2 {
+    margin-right: 10px;
+}
+
+.table-data {
+    height: 450px;
+    max-height: 450px; 
+    overflow-y: auto; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+table {
+    border-radius: 20px;
+    border-collapse: collapse;
+    width: 86%;
+    margin: auto;
+}
+
+td, th {
+    width: 200px;
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.att-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.submit-btn {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-text1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-icon {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.det-name {
+    font-size: 16px;
+    color: #212121;
+    margin-bottom: 8px;
+}
+
+.href {
+    text-decoration: none;
+}
+
+ /* Style for the button */
+.zoom-btn {
+    background-color: #1531a9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Zoom out effect */
+.zoom-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: white;
+    transition: all 0.3s ease;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+/* Hover effect */
+.zoom-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Border effect */
+.zoom-btn:hover {
+    border: 2px solid #1531a9;
+}
+
+/* Text styling */
+.btn-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* Inner text color */
+.zoom-btn:hover .btn-text {
+    color: #1531a9;
+}

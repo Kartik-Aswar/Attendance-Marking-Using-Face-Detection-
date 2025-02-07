@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Marker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+
+        <!-- Logo -->
+        <div class="nav-logo">
+            <div class="logo">
+                <p class="p1">attendance</p>
+                <p class="p2">m&nbsp;&nbsp;a&nbsp;&nbsp;r&nbsp;&nbsp;&nbsp;k&nbsp;&nbsp;e&nbsp;&nbsp;r</p>
+            </div>
+        </div>
+
+        <!-- Options -->
+        <div class="nav-options">
+            <div class="option1 opt">
+                <select class="industry">
+                    <option>Classrooms</option>
+                </select>
+            </div>
+    
+            <div class="opt">
+                <p>Student Data</p>
+            </div>
+    
+            <div class="opt">
+                <p>Reviews</p>
+            </div>
+    
+            <div class="opt">
+                <p>About Us</p>
+            </div>
+
+            <div class="opt">
+                <button class="btn zoom-btn">
+                    <span class="btn-text">Create Class</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hero section -->
+    <div class="hero">
+
+        <div class="hero-upr">
+            <div class="hero-text">
+
+                <div class="tag-line">
+                    <div class="gry-blue">
+                        <p class="gry">Advance</p>
+                        <p>&nbsp;Face Recognition</p> 
+                    </div>
+                    <p>Attendance System</p>
+                    <p class="gry">Centralized and Foolproof</p>
+                </div>
+    
+                <div class="subtitle">
+                    <p>Attendance Marker is here to detect your face and mark your presence!</p>
+                </div>
+                <br>
+                <br>
+                <div class="go-to-add-attendance">
+                    <form action="/attendance">
+                        <button class="btn zoom-btn attendance-route">
+                            <span class="btn-text">Add new Student</span>
+                        </button>
+                    </form>
+                </div>
+                <br>
+                <div class="go-to-add-attendance">
+                    <form action="/attendance/mark">
+                        <button class="btn zoom-btn attendance-route">
+                            <span class="btn-text">Mark today's Attendance</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+    
+            <div class="gif">
+                <video src="https://storage.googleapis.com/ytpl_backup_060223_0113/truein/resources/videos/truein-face-attendance-demo.webm" autoplay loop muted="muted" playsinline controlslist="nodownload"></video>
+            </div>
+        </div>
+
+
+        <div class="hero-lwr">
+            <div class="img1">
+                <img src="https://truein.com/wp-content/uploads/2021/12/mobiletablet-based-attendance.png" class="img">
+            </div>
+            <div class="img1">
+                <img src="https://truein.com/wp-content/uploads/2021/12/Recognition-Face-Mask-On-1.png" class="img">
+            </div>
+            <div class="img1">
+                <img src="https://truein.com/wp-content/uploads/elementor/thumbs/New-Project-9-qjpgwez5xx42rh5wvji49iktnzgm99k9q9hs438tvo.png" class="img">
+            </div>
+            <div class="img1">
+                <img src="https://truein.com/wp-content/uploads/2021/12/Features.png" class="img4">
+            </div>
+        </div>
+    </div>
+
+    
+
+   
+    
+    <script>
+        // Function to handle button click event
+        document.getElementById('scrollButton').addEventListener('click', function() {
+            // Scroll to the target section
+            document.getElementById('scrollTarget').scrollIntoView({
+            behavior: 'smooth'
+            });
+        });
+
+        setInterval(function() {
+        var image = document.getElementById("video_feed");
+        image.src = "{{ url_for('video_feed') }}" + "?" + new Date().getTime(); // Prevent caching
+        }, 500);  // Refresh every 500 ms
+    </script>
+
+
+</body>
+
+</html>

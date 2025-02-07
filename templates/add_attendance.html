@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Marker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+
+
+<body>
+    
+     <!-- Attendance section -->
+     <!-- <div id="scrollTarget"> -->
+        <div class="table-title">
+            <p>Your Face is your</p>
+            <p class="pre">&nbsp;Presence!</p>
+        </div>
+
+        {% if mess%}
+        <p>{{ mess }}</p>
+        {% endif %}
+
+        <div class="attendance-box">
+            <div class="boxing-horizontal">
+                <div class="input-data boxing">
+
+                    <form action="/add" method="POST" enctype="multipart/form-data" class="form">
+    
+                        <div class="add-new-usr">
+                            <div class="add-icon">
+                                <i class="material-icons">control_point_duplicate</i>
+                            </div>
+                            <p>Add New Student</p>
+                        </div>
+    
+                        <label class="label">Enter Name of Student</label><br>
+                        <div class="user-name">
+                            <input placeholder="Name" type="text" id="newusername" name="newusername" required class="input"><br>
+                        </div>
+    
+                        <label class="label">Enter Roll number of Student</label><br>
+                        <div class="user-id">
+                            <input placeholder="Roll number" type="number" id="newusereid" name="newuserid" required class="input"><br>
+                        </div>
+    
+                        <div class="data-submit-btn">
+                            <button type="submit" class="btn zoom-btn">
+                                <span class="btn-text">Submit</span>
+                            </button><br>
+                        </div>
+    
+                        <div class="total-user">
+                            <p>Total Students in Class: {{totalreg}}</p>
+                        </div>
+    
+                    </form>
+                        
+                        <div class="form-foot">
+                            <p>Once you click submit look at the camera till the <b>Camera gets paused.</b> We will capture your images.</p>
+                        </div>
+    
+                </div>
+
+                <div class="camera-box-for-adding-student boxing">
+                    <h2>Your face will be captured here!</h2>
+                    <img id="video_feed" src="{{ url_for('video_feed') }}" alt="Video Feed" />
+                </div>
+            </div>
+
+
+           
+        </div>
+    <!-- </div> -->
+
+
+    <div class="go-to-add-attendance">
+        <form action="/attendance/mark">
+            <button class="btn zoom-btn attendance-route">
+                <span class="btn-text">Go to mark todays Attendance</span>
+            </button>
+        </form>
+    </div>
+
+    
+    <script>
+        // Function to handle button click event
+        document.getElementById('scrollButton').addEventListener('click', function() {
+            // Scroll to the target section
+            document.getElementById('scrollTarget').scrollIntoView({
+            behavior: 'smooth'
+            });
+        });
+
+        setInterval(function() {
+        var image = document.querySelector("#camera-box-for-adding-student img");
+        image.src = "{{ current_frame }}" + "?" + new Date().getTime(); // Add timestamp to prevent caching
+        }, 500);  // Update every 500 milliseconds (adjust as needed)
+    </script>
+
+
+</body>
+
+</html>
